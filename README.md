@@ -17,6 +17,9 @@ Sitio estático: `index.html`, `styles.css`, `app.js` y `assets/`. Sin build.
 Fuente: Meta Business Suite, Facebook /HaftenOficial, últimos 28 días (8 sep – 5 oct 2026).
 Totales exactos de la plataforma; la serie diaria y el desglose seguidores/no seguidores por formato se reconstruyeron de la gráfica (aprox.). Para actualizar, edita las constantes al inicio de `app.js` y los números en `index.html`.
 
+## Antes de publicar
+Ejecuta `./stamp.sh` después de editar `styles.css` o `app.js`: agrega la huella del archivo a la URL para que ningún navegador use estilos viejos en caché.
+
 ## Local
 ```
 python3 -m http.server 8000
