@@ -153,259 +153,299 @@
 
   <!-- ============ PARTE 2 · SERVIDOR RECOMENDADO ============ -->
 
-  <!-- 7 · PORTADA INFRAESTRUCTURA -->
-  <section class="slide slide-srv-intro" data-title="Servidor · Requisitos">
-    <div class="srv-intro">
-      <div>
-        <p class="eyebrow">Parte 2 · Análisis de infraestructura · 12 oct 2026</p>
-        <h2 class="big">Servidor recomendado para <span class="accent">Haften</span></h2>
-        <p class="lead">Objetivo: encontrar un servidor que permita migrar el sistema RP/ERP actual, mantener el acceso del equipo y operar de forma estable.</p>
-        <div class="callout">
-          <b>Primer hallazgo</b>
-          IONOS México ofrece dedicados que cumplen RAM y almacenamiento desde <b>≈$2,277 MXN/mes</b> (promoción). Aún falta sumar Windows Server, accesos del equipo, respaldos y migración.
-        </div>
+  <!-- 7 · PORTADA SERVIDOR -->
+  <section class="slide slide-cover slide-srv-cover" data-title="Servidor · Portada">
+    <div class="cover-text">
+      <div class="cover-logos">
+        <div class="logo-plate"><img src="assets/logos/haften.png" alt="Haften"></div>
+        <span class="x-sep">×</span>
+        <img class="cover-ionos" src="assets/logos/ionos.svg" alt="IONOS">
       </div>
-      <div class="card req-card">
-        <h3>Requisitos mínimos</h3>
-        <dl class="req">
-          <div><dt>Memoria RAM</dt><dd>64 GB</dd></div>
-          <div><dt>Almacenamiento</dt><dd>512 GB mín. · ideal 1 TB</dd></div>
-          <div><dt>Sistema operativo</dt><dd>Windows Server 2022 / 2025</dd></div>
-          <div><dt>Procesamiento</dt><dd>8 núcleos o más</dd></div>
-          <div><dt>Tipo de servidor</dt><dd>Dedicado o cloud empresarial</dd></div>
-          <div><dt>Acceso del equipo</dt><dd>Remoto vía VPN o RDS</dd></div>
-          <div><dt>Disponibilidad</dt><dd>24/7</dd></div>
-        </dl>
-        <p class="card-foot">64 GB y 1 TB no garantizan que el ERP funcione: falta revisar base de datos, licencias, usuarios concurrentes y dependencias.</p>
+      <p class="eyebrow">Parte 2 · Análisis de infraestructura</p>
+      <h1>Servidor<br><span class="accent">recomendado</span><br>para Haften</h1>
+      <div class="cover-meta">
+        <div><span class="meta-k">Objetivo</span><span class="meta-v">Migrar el RP/ERP</span></div>
+        <div><span class="meta-k">Proveedor base</span><span class="meta-v">IONOS México</span></div>
+        <div><span class="meta-k">Fecha</span><span class="meta-v">12 oct 2026</span></div>
+      </div>
+    </div>
+    <div class="rack-stage">
+      <div class="rack-glow"></div>
+      <div class="rack">
+        <div class="rack-head"><img src="assets/logos/ionos.svg" alt=""><span>Dedicated Server</span></div>
+        <div class="unit u-hl"><span class="leds"><i></i><i></i><i></i></span><span class="bays"><b></b><b></b><b></b><b></b><b></b><b></b></span><span class="u-label">AE8-64 NVMe L</span></div>
+        <div class="unit"><span class="leds"><i></i><i></i><i></i></span><span class="bays"><b></b><b></b><b></b><b></b><b></b><b></b></span><span class="u-label">Windows Server 2025</span></div>
+        <div class="unit"><span class="leds"><i></i><i></i><i></i></span><span class="bays"><b></b><b></b><b></b><b></b><b></b><b></b></span><span class="u-label">ERP · SQL</span></div>
+        <div class="unit"><span class="leds"><i></i><i></i><i></i></span><span class="bays"><b></b><b></b><b></b><b></b><b></b><b></b></span><span class="u-label">Respaldo</span></div>
+        <div class="rack-foot"></div>
+      </div>
+      <div class="chip-row">
+        <div class="chip-float cf1"><b>64 GB</b><span>DDR5 ECC</span></div>
+        <div class="chip-float cf2"><b>1 TB</b><span>NVMe RAID 1</span></div>
+        <div class="chip-float cf3"><b>24/7</b><span>Operación continua</span></div>
       </div>
     </div>
   </section>
 
-  <!-- 8 · IONOS AMD -->
-  <section class="slide slide-srv-amd" data-title="IONOS · AMD">
+  <!-- 8 · REQUISITOS -->
+  <section class="slide slide-srv-req" data-title="Requisitos">
     <header class="slide-head">
-      <p class="eyebrow">06 · Opciones IONOS México · AMD NVMe</p>
-      <h2>Tres dedicados AMD con 64 GB ECC y discos NVMe en RAID 1</h2>
+      <p class="eyebrow">06 · Requisitos mínimos</p>
+      <h2>Lo que necesita el servidor para mover el ERP</h2>
+      <p class="sub">Base de la investigación · dedicado o cloud empresarial con acceso remoto del equipo</p>
+    </header>
+    <div class="impact-grid">
+      <div class="hero-card">
+        <span class="hero-label">Memoria RAM</span>
+        <span class="hero-num" data-count="64" data-suffix=" GB">64 GB</span>
+        <span class="hero-delta">Con <b>ECC</b>, ideal para bases de datos</span>
+        <div class="callout callout-in">
+          <b>Primer hallazgo</b>
+          IONOS México cumple RAM y disco desde <b>$2,277 MXN/mes</b> (promoción). Falta sumar Windows, accesos, respaldos y migración.
+        </div>
+      </div>
+      <div class="kpi"><svg viewBox="0 0 24 24" class="ico"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><span class="kpi-num">1 TB</span><span class="kpi-label">Almacenamiento</span><span class="kpi-note">512 GB mínimo · ideal 1 TB NVMe</span></div>
+      <div class="kpi"><svg viewBox="0 0 24 24" class="ico"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg><span class="kpi-num">8+</span><span class="kpi-label">Núcleos</span><span class="kpi-note">Procesamiento preferente</span></div>
+      <div class="kpi kpi-red"><svg viewBox="0 0 24 24" class="ico"><path d="M3 5l8-1.2V11H3zM13 3.5L21 2v9h-8zM3 13h8v7.2L3 19zM13 13h8v9l-8-1.5z"/></svg><span class="kpi-num kpi-sm">Windows Server</span><span class="kpi-label">2022 o 2025</span><span class="kpi-note">Sistema operativo del ERP</span></div>
+      <div class="kpi"><svg viewBox="0 0 24 24" class="ico"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span class="kpi-num kpi-sm">VPN · RDS</span><span class="kpi-label">Acceso remoto · 24/7</span><span class="kpi-note">Según cómo trabaje el ERP</span></div>
+    </div>
+    <p class="footnote">64 GB y 1 TB no garantizan que el ERP funcione: falta revisar base de datos, licencias, usuarios concurrentes y dependencias.</p>
+  </section>
+
+  <!-- 9 · IONOS AMD -->
+  <section class="slide slide-srv-amd" data-title="IONOS · AMD">
+    <header class="slide-head head-logo">
+      <div>
+        <p class="eyebrow">07 · IONOS México · AMD + NVMe</p>
+        <h2>Tres dedicados AMD con 64 GB ECC</h2>
+      </div>
+      <div class="head-logos"><img src="assets/logos/ionos.svg" alt="IONOS" class="hl-ionos"><img src="assets/logos/amd.svg" alt="AMD" class="hl-amd"></div>
     </header>
     <div class="srv-cards">
       <article class="srv">
-        <span class="tag">Mejor precio inicial</span>
+        <div class="srv-top"><span class="tag">Mejor precio inicial</span><span class="disk nvme">NVMe</span></div>
         <h3>AR8-64 NVMe</h3>
-        <p class="price">$2,277<small> MXN/mes</small></p>
-        <p class="price-note">Promoción, contrato de 1 año · regular $2,530</p>
+        <p class="price"><span data-count="2277" data-prefix="$">$2,277</span><small> MXN/mes</small></p>
+        <p class="price-note">Promoción 1 año · después $2,530</p>
         <ul class="specs">
-          <li><span>CPU</span>AMD Ryzen 7 PRO 3700 · 8 núcleos</li>
+          <li><span>CPU</span>Ryzen 7 PRO 3700 · 8 núcleos</li>
           <li><span>RAM</span>64 GB DDR4 ECC</li>
-          <li><span>Disco</span>2 × 960 GB NVMe RAID 1</li>
-          <li><span>Útil</span>≈ 960 GB</li>
+          <li><span>Disco</span>2 × 960 GB NVMe · RAID 1</li>
         </ul>
-        <p class="yr"><span>Año 1 con Windows</span><b>$38,494</b></p>
+        <div class="meter"><span class="m-k">Espacio útil</span><span class="m-bar"><i style="width:47%"></i></span><span class="m-v">960 GB</span></div>
+        <p class="yr"><span>Año 1 con Windows</span><b data-count="38494" data-prefix="$">$38,494</b></p>
       </article>
       <article class="srv rec">
-        <span class="tag tag-red">Recomendado</span>
+        <div class="srv-top"><span class="tag tag-red">★ Recomendado</span><span class="disk nvme">NVMe</span></div>
         <h3>AE8-64 NVMe L</h3>
-        <p class="price">$3,762<small> MXN/mes</small></p>
-        <p class="price-note">Precio mensual publicado · cancelación mensual</p>
+        <p class="price"><span data-count="3762" data-prefix="$">$3,762</span><small> MXN/mes</small></p>
+        <p class="price-note">Precio publicado · cancelación mensual</p>
         <ul class="specs">
-          <li><span>CPU</span>AMD EPYC 4344P · 8 núcleos</li>
+          <li><span>CPU</span>EPYC 4344P · 8 núcleos</li>
           <li><span>RAM</span>64 GB DDR5 ECC</li>
-          <li><span>Disco</span>2 × 1,024 GB NVMe RAID 1</li>
-          <li><span>Útil</span>≈ 1 TB</li>
+          <li><span>Disco</span>2 × 1,024 GB NVMe · RAID 1</li>
         </ul>
-        <p class="yr"><span>Año 1 con Windows</span><b>$57,308</b></p>
+        <div class="meter"><span class="m-k">Espacio útil</span><span class="m-bar"><i style="width:50%"></i></span><span class="m-v">1 TB</span></div>
+        <p class="yr"><span>Año 1 con Windows</span><b data-count="57308" data-prefix="$">$57,308</b></p>
       </article>
       <article class="srv">
-        <span class="tag">Más espacio</span>
+        <div class="srv-top"><span class="tag">Más espacio</span><span class="disk nvme">NVMe</span></div>
         <h3>AE8-64 NVMe XL</h3>
-        <p class="price">$4,378<small> MXN/mes</small></p>
-        <p class="price-note">Precio mensual publicado · cancelación mensual</p>
+        <p class="price"><span data-count="4378" data-prefix="$">$4,378</span><small> MXN/mes</small></p>
+        <p class="price-note">Precio publicado · cancelación mensual</p>
         <ul class="specs">
-          <li><span>CPU</span>AMD EPYC 4344P · 8 núcleos</li>
+          <li><span>CPU</span>EPYC 4344P · 8 núcleos</li>
           <li><span>RAM</span>64 GB DDR5 ECC</li>
-          <li><span>Disco</span>2 × 2,048 GB NVMe RAID 1</li>
-          <li><span>Útil</span>≈ 2 TB</li>
+          <li><span>Disco</span>2 × 2,048 GB NVMe · RAID 1</li>
         </ul>
-        <p class="yr"><span>Año 1 con Windows</span><b>$65,554</b></p>
+        <div class="meter"><span class="m-k">Espacio útil</span><span class="m-bar"><i style="width:100%"></i></span><span class="m-v">2 TB</span></div>
+        <p class="yr"><span>Año 1 con Windows</span><b data-count="65554" data-prefix="$">$65,554</b></p>
       </article>
     </div>
-    <p class="footnote">Fuente: catálogo oficial IONOS México. Precios de hardware sin IVA; Windows Server +$720 MXN/mes (servidores de 4–8 núcleos).</p>
+    <p class="footnote">Fuente: catálogo oficial IONOS México. Sin IVA. Windows Server +$720 MXN/mes en servidores de 4–8 núcleos.</p>
   </section>
 
-  <!-- 9 · IONOS INTEL -->
+  <!-- 10 · IONOS INTEL -->
   <section class="slide slide-srv-intel" data-title="IONOS · Intel">
-    <header class="slide-head">
-      <p class="eyebrow">07 · Opciones IONOS México · Intel Xeon</p>
-      <h2>Intel cuesta lo mismo que AMD… pero con discos HDD</h2>
-    </header>
-    <div class="intel-grid">
-      <div class="card table-card">
-        <table class="dt">
-          <thead><tr><th>Modelo</th><th>Procesador</th><th class="n">RAM</th><th>Disco útil (RAID 1)</th><th class="n">Promo/mes</th><th class="n">Año 1*</th><th class="n">Año 2*</th></tr></thead>
-          <tbody>
-            <tr class="hl"><td><b>IX8-64 HDD</b></td><td>Xeon E-2378 · 8 núcleos</td><td class="n">64 GB</td><td>4 TB HDD</td><td class="n">$2,277</td><td class="n">$38,494</td><td class="n">$39,000</td></tr>
-            <tr><td><b>3XL-192 HDD</b></td><td>Xeon Gold 6126 · 12 núcleos</td><td class="n">192 GB</td><td>4 TB HDD</td><td class="n">$4,336</td><td class="n">$69,810</td><td class="n">$70,776</td></tr>
-            <tr><td><b>4XL-192 HDD</b></td><td>Xeon Gold 6210U · 20 núcleos</td><td class="n">192 GB</td><td>4 TB HDD</td><td class="n">$4,851</td><td class="n">$85,202</td><td class="n">$86,280</td></tr>
-            <tr><td><b>IX24-256 HDD</b></td><td>Xeon Gold 5412U · 24 núcleos</td><td class="n">256 GB</td><td>8 TB HDD</td><td class="n">$6,831</td><td class="n">$115,482</td><td class="n">$117,000</td></tr>
-          </tbody>
-        </table>
-        <p class="card-foot">* MXN antes de IVA. Incluye servidor, Windows Server (según núcleos) y alta. No incluye SQL Server, RDS CAL, respaldos ni migración. Año 2 = tarifa regular publicada, no garantizada.</p>
+    <header class="slide-head head-logo">
+      <div>
+        <p class="eyebrow">08 · IONOS México · Intel Xeon</p>
+        <h2>Intel cuesta igual que AMD… pero con disco HDD</h2>
       </div>
-      <div class="side-notes">
-        <div class="note-card">
-          <span class="nc-k">IX8-64 vs. AR8-64</span>
-          <p>Mismo precio ($38,494 el año 1), pero el Intel usa <b>HDD</b> y el AMD <b>NVMe</b>. Para una base de datos de ERP con varios usuarios, el disco pesa más que la marca del CPU.</p>
-        </div>
-        <div class="note-card">
-          <span class="nc-k">192 y 256 GB</span>
-          <p>Probablemente excesivos si el ERP no exige una carga alta.</p>
-        </div>
-        <div class="note-card">
-          <span class="nc-k">Intel con SSD/NVMe</span>
-          <p>IONOS los anuncia, pero no hay precio verificable publicado. Hay que pedirlo en el configurador comercial.</p>
-        </div>
+      <div class="head-logos"><img src="assets/logos/ionos.svg" alt="IONOS" class="hl-ionos"><img src="assets/logos/intel.svg" alt="Intel" class="hl-intel"></div>
+    </header>
+    <div class="versus">
+      <div class="vs-side">
+        <img src="assets/logos/intel.svg" alt="Intel" class="vs-logo vs-intel">
+        <div><b>IX8-64 HDD</b><span>Xeon E-2378 · 8 núcleos · 4 TB</span></div>
+        <span class="disk hdd">HDD</span>
+      </div>
+      <div class="vs-mid"><span class="vs-price">$38,494</span><span class="vs-k">mismo costo año 1</span><span class="vs-badge">VS</span></div>
+      <div class="vs-side vs-win">
+        <img src="assets/logos/amd.svg" alt="AMD" class="vs-logo vs-amd">
+        <div><b>AR8-64 NVMe</b><span>Ryzen 7 PRO · 8 núcleos · 960 GB</span></div>
+        <span class="disk nvme">NVMe</span>
       </div>
     </div>
+    <p class="vs-note">Para una base de datos de ERP con varios usuarios, <b>el tipo de disco pesa más que la marca del procesador.</b></p>
+    <div class="intel-cards">
+      <article class="ic"><div class="ic-top"><b>IX8-64</b><span class="disk hdd">HDD</span></div><p>Xeon E-2378 · 8 núcleos</p><div class="ic-specs"><span><b>64</b> GB</span><span><b>4</b> TB</span></div><p class="ic-price">$2,277<small>/mes</small></p><p class="ic-yr">Año 1 <b>$38,494</b> · Año 2 $39,000</p></article>
+      <article class="ic"><div class="ic-top"><b>3XL-192</b><span class="disk hdd">HDD</span></div><p>Xeon Gold 6126 · 12 núcleos</p><div class="ic-specs"><span><b>192</b> GB</span><span><b>4</b> TB</span></div><p class="ic-price">$4,336<small>/mes</small></p><p class="ic-yr">Año 1 <b>$69,810</b> · Año 2 $70,776</p></article>
+      <article class="ic"><div class="ic-top"><b>4XL-192</b><span class="disk hdd">HDD</span></div><p>Xeon Gold 6210U · 20 núcleos</p><div class="ic-specs"><span><b>192</b> GB</span><span><b>4</b> TB</span></div><p class="ic-price">$4,851<small>/mes</small></p><p class="ic-yr">Año 1 <b>$85,202</b> · Año 2 $86,280</p></article>
+      <article class="ic"><div class="ic-top"><b>IX24-256</b><span class="disk hdd">HDD</span></div><p>Xeon Gold 5412U · 24 núcleos</p><div class="ic-specs"><span><b>256</b> GB</span><span><b>8</b> TB</span></div><p class="ic-price">$6,831<small>/mes</small></p><p class="ic-yr">Año 1 <b>$115,482</b> · Año 2 $117,000</p></article>
+    </div>
+    <p class="footnote">Precio promocional/mes. Año 1 y 2 incluyen Windows Server según núcleos y alta; sin IVA, SQL, RDS CAL ni respaldos. 192–256 GB probablemente excesivos para el ERP. Intel con SSD/NVMe: pedir precio en el configurador.</p>
   </section>
 
-  <!-- 10 · COSTO ANUAL -->
+  <!-- 11 · COSTO ANUAL -->
   <section class="slide slide-srv-cost" data-title="Costo anual con Windows">
-    <header class="slide-head">
-      <p class="eyebrow">08 · Costo real con Windows Server</p>
-      <h2>Primer año con Windows y alta incluidos</h2>
-      <p class="sub">MXN sin IVA · sin respaldos, SQL Server ni licencias de acceso de usuarios</p>
+    <header class="slide-head head-logo">
+      <div>
+        <p class="eyebrow">09 · Costo real con Windows Server</p>
+        <h2>Primer año con Windows y alta incluidos</h2>
+        <p class="sub">MXN sin IVA · sin respaldos, SQL Server ni licencias de acceso</p>
+      </div>
+      <div class="head-logos"><img src="assets/logos/ionos.svg" alt="IONOS" class="hl-ionos"></div>
     </header>
     <div class="cost-grid">
       <div class="card">
         <h3>Costo año 1 por opción</h3>
+        <div class="legend legend-top">
+          <span><i class="sw sw-red"></i>Recomendado</span>
+          <span><i class="sw sw-blue"></i>Opción económica</span>
+          <span><i class="sw sw-gray"></i>Otras</span>
+        </div>
         <div class="hbars" id="costBars"></div>
       </div>
-      <div class="card breakdown-card">
-        <h3>¿De qué se compone? · AR8-64 NVMe</h3>
-        <p class="bd-total">$38,494 <small>año 1</small></p>
+      <div class="hero-card breakdown-card">
+        <span class="hero-label">¿De qué se compone? · AR8-64 NVMe</span>
+        <span class="hero-num hero-num-md" data-count="38494" data-prefix="$">$38,494</span>
+        <span class="hero-delta">Año 1 · año 2 estimado <b class="plain">$39,000</b></span>
         <div class="stack" id="stackBar"></div>
         <div class="legend legend-col">
-          <span><i class="sw sw-red"></i>Hardware (12 × $2,277)<b>$27,324</b></span>
-          <span><i class="sw sw-blue"></i>Windows Server (12 × $720)<b>$8,640</b></span>
+          <span><i class="sw sw-red"></i>Hardware · 12 × $2,277<b>$27,324</b></span>
+          <span><i class="sw sw-blue"></i>Windows Server · 12 × $720<b>$8,640</b></span>
           <span><i class="sw sw-amber"></i>Alta inicial<b>$2,530</b></span>
         </div>
-        <p class="card-foot">Año 2 estimado: $39,000 (tarifa regular $2,530 + Windows).</p>
       </div>
     </div>
   </section>
 
-  <!-- 11 · CLOUD + ALTERNATIVAS -->
+  <!-- 12 · CLOUD + ALTERNATIVAS -->
   <section class="slide slide-srv-alt" data-title="Cloud y alternativas">
     <header class="slide-head">
-      <p class="eyebrow">09 · Otras opciones</p>
+      <p class="eyebrow">10 · Otras opciones</p>
       <h2>Cloud Cube XL y proveedores internacionales</h2>
     </header>
     <div class="alt-grid">
-      <div class="card cube-card">
-        <span class="tag">IONOS Cloud</span>
+      <article class="srv cube">
+        <div class="srv-top"><img src="assets/logos/ionos.svg" alt="IONOS" class="card-logo"><span class="tag">Cloud · virtual</span></div>
         <h3>Cloud Cube XL</h3>
-        <ul class="specs">
-          <li><span>vCPU</span>16</li>
-          <li><span>RAM</span>64 GB</li>
-          <li><span>Disco</span>960 GB</li>
-          <li><span>Base</span>$2.257 MXN/hora</li>
-          <li><span>Windows</span>$0.1476 MXN/h por vCPU</li>
-        </ul>
+        <div class="cube-specs">
+          <div><b>16</b><span>vCPU</span></div>
+          <div><b>64</b><span>GB RAM</span></div>
+          <div><b>960</b><span>GB disco</span></div>
+        </div>
+        <p class="price-note">$2.257 MXN/hora + Windows $0.1476/h por vCPU</p>
         <p class="yr"><span>Proyección anual + Windows</span><b>≈$40,476</b></p>
-        <p class="card-foot">Referencia, no precio confirmado: la licencia publicada en Cloud Cubes es anterior a la vigente. Infraestructura virtualizada, sin recursos físicos exclusivos.</p>
-      </div>
-      <div class="card table-card">
-        <h3>Alternativas a IONOS <small>· moneda original, sin Windows ni impuestos</small></h3>
-        <table class="dt">
-          <thead><tr><th>Proveedor / modelo</th><th>Características</th><th class="n">Año 1</th><th class="n">Año 2</th></tr></thead>
-          <tbody>
-            <tr><td><b>OVHcloud RISE-S</b></td><td>Ryzen 7 9700X · 8 núcleos · 64 GB · 2 × 512 GB NVMe</td><td class="n">US$1,001</td><td class="n">US$924</td></tr>
-            <tr><td><b>OVHcloud RISE-M</b></td><td>Ryzen 9 9900X · 12 núcleos · 64 GB · 2 × 512 GB NVMe</td><td class="n">US$1,534</td><td class="n">US$1,416</td></tr>
-            <tr><td><b>Hetzner AX42-1</b></td><td>€97.30/mes + €49 alta · Falkenstein/Helsinki · almacenamiento por verificar</td><td class="n">€1,216.60</td><td class="n">€1,167.60</td></tr>
-          </tbody>
-        </table>
-        <p class="card-foot">Con discos en espejo, OVH queda en ≈512 GB útiles. Hetzner ofrece Windows Server 2025 como extra, sin precio final verificable. Por ahora <b>IONOS tiene la cotización más completa y verificable en pesos</b>.</p>
+        <p class="card-foot">Referencia, no precio confirmado: la licencia publicada es anterior a la vigente. Sin recursos físicos exclusivos.</p>
+      </article>
+      <div class="prov-col">
+        <article class="prov">
+          <img src="assets/logos/ovhcloud.svg" alt="OVHcloud" class="prov-logo">
+          <div class="prov-name"><b>OVHcloud RISE-S</b><span>Ryzen 7 9700X · 8 núcleos · 64 GB · 2 × 512 GB NVMe</span></div>
+          <div class="prov-price"><b>US$1,001</b><span>año 1 · año 2 US$924</span></div>
+        </article>
+        <article class="prov">
+          <img src="assets/logos/ovhcloud.svg" alt="OVHcloud" class="prov-logo">
+          <div class="prov-name"><b>OVHcloud RISE-M</b><span>Ryzen 9 9900X · 12 núcleos · 64 GB · 2 × 512 GB NVMe</span></div>
+          <div class="prov-price"><b>US$1,534</b><span>año 1 · año 2 US$1,416</span></div>
+        </article>
+        <article class="prov">
+          <img src="assets/logos/hetzner.svg" alt="Hetzner" class="prov-logo">
+          <div class="prov-name"><b>Hetzner AX42-1</b><span>€97.30/mes + €49 alta · Alemania/Finlandia · disco por verificar</span></div>
+          <div class="prov-price"><b>€1,216.60</b><span>año 1 · año 2 €1,167.60</span></div>
+        </article>
+        <p class="prov-note">Moneda original, sin Windows ni impuestos. Hoy <b>IONOS es la cotización más completa y verificable en pesos.</b></p>
       </div>
     </div>
   </section>
 
-  <!-- 12 · LICENCIAS -->
+  <!-- 13 · LICENCIAS -->
   <section class="slide slide-srv-lic" data-title="SQL Server y accesos">
     <header class="slide-head">
-      <p class="eyebrow">10 · El costo que puede cambiarlo todo</p>
-      <h2>SQL Server y el acceso del equipo</h2>
+      <p class="eyebrow">11 · El costo que puede cambiarlo todo</p>
+      <h2>Las licencias pueden costar más que el servidor</h2>
     </header>
     <div class="lic-grid">
-      <div class="card">
-        <h3>Microsoft SQL Server en IONOS</h3>
-        <div class="lic-rows">
-          <div class="lic"><span class="lic-n">SQL Server Express 2022</span><span class="lic-v ok">Gratis</span></div>
-          <div class="lic"><span class="lic-n">SQL Server Web 2022</span><span class="lic-v">$530<small> / 4 CPU · con restricciones</small></span></div>
-          <div class="lic"><span class="lic-n">SQL Server Standard 2022</span><span class="lic-v">$7,300<small> / 4 CPU</small></span></div>
+      <div class="hero-card">
+        <span class="hero-label">Si el ERP exige SQL Server Standard en 8 núcleos</span>
+        <span class="hero-num hero-num-md"><span data-count="14600" data-prefix="+$">+$14,600</span><small class="hn-unit"> MXN/mes</small></span>
+        <span class="hero-delta">≈ <b class="red">$175,200 al año</b> · sujeto a validar el licenciamiento</span>
+        <div class="hero-compare">
+          <div class="cmp-row"><span class="cmp-k">Servidor AE8-64 L</span><span class="cmp-bar"><i style="width:32.7%"></i></span><span class="cmp-v">$57,308</span></div>
+          <div class="cmp-row now"><span class="cmp-k">SQL Standard / año</span><span class="cmp-bar"><i style="width:100%"></i></span><span class="cmp-v">$175,200</span></div>
         </div>
-        <p class="card-foot">MXN mensuales. No debemos asumir que el ERP puede usar Express o Web.</p>
       </div>
       <div class="lic-side">
-        <div class="hero-mini">
-          <span class="hm-k">Si el ERP exige SQL Standard en 8 núcleos</span>
-          <span class="hm-v">+$14,600<small> MXN/mes</small></span>
-          <span class="hm-n">≈ $175,200 MXN al año · más que el servidor mismo · sujeto a validar el licenciamiento</span>
-        </div>
-        <div class="note-card">
-          <span class="nc-k">Escritorio Remoto (RDS)</span>
-          <p>Si varios empleados entran por RDP hay que presupuestar <b>licencias RDS CAL</b>. Windows Server por sí solo no habilita sesiones para todo el equipo.</p>
-        </div>
+        <div class="lic"><span class="lic-n">SQL Server Express 2022</span><span class="lic-v ok">Gratis</span></div>
+        <div class="lic"><span class="lic-n">SQL Server Web 2022<small>con restricciones de uso</small></span><span class="lic-v">$530<small>/4 CPU</small></span></div>
+        <div class="lic lic-hl"><span class="lic-n">SQL Server Standard 2022<small>tarifa IONOS mensual</small></span><span class="lic-v">$7,300<small>/4 CPU</small></span></div>
+        <div class="kpi kpi-red kpi-row"><svg viewBox="0 0 24 24" class="ico"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><div><span class="kpi-label">Escritorio Remoto · RDS CAL</span><span class="kpi-note">Si varios empleados entran por RDP hay que presupuestar sus licencias: Windows Server solo no las incluye.</span></div></div>
       </div>
     </div>
+    <p class="footnote">MXN mensuales sin IVA. No debemos asumir que el ERP puede usar SQL Express o Web.</p>
   </section>
 
-  <!-- 13 · MIGRACIÓN -->
+  <!-- 14 · MIGRACIÓN -->
   <section class="slide slide-srv-mig" data-title="Plan de migración">
     <header class="slide-head">
-      <p class="eyebrow">11 · Propuesta técnica</p>
+      <p class="eyebrow">12 · Propuesta técnica</p>
       <h2>Migración del ERP en cinco fases</h2>
     </header>
     <ol class="phases">
-      <li><span class="ph-n">1</span><h3>Auditoría</h3><p>Software, versión, base de datos, tamaño, integraciones, usuarios y licencias.</p></li>
-      <li><span class="ph-n">2</span><h3>Preparación</h3><p>Windows Server, almacenamiento, firewall, VPN, políticas de acceso y respaldos.</p></li>
-      <li><span class="ph-n">3</span><h3>Migración de prueba</h3><p>Copia del ERP para validar rendimiento, permisos, reportes y operaciones.</p></li>
-      <li><span class="ph-n">4</span><h3>Cambio a producción</h3><p>Respaldo consistente, pausa de escrituras, cambios finales y pruebas con el equipo.</p></li>
-      <li><span class="ph-n">5</span><h3>Estabilización</h3><p>Monitoreo, verificación de respaldos y plan de reversión.</p></li>
+      <li><span class="ph-n">01</span><h3>Auditoría</h3><p>Software, versión, base de datos, tamaño, integraciones, usuarios y licencias.</p></li>
+      <li><span class="ph-n">02</span><h3>Preparación</h3><p>Windows Server, almacenamiento, firewall, VPN, accesos y respaldos.</p></li>
+      <li><span class="ph-n">03</span><h3>Migración de prueba</h3><p>Copia del ERP para validar rendimiento, permisos, reportes y operación.</p></li>
+      <li><span class="ph-n">04</span><h3>Cambio a producción</h3><p>Respaldo consistente, pausa de escrituras, cambios finales y pruebas.</p></li>
+      <li><span class="ph-n">05</span><h3>Estabilización</h3><p>Monitoreo, verificación de respaldos y plan de reversión.</p></li>
     </ol>
     <div class="arch">
-      <div class="arch-node"><b>Equipo Haften</b><span>Oficina / remoto</span></div>
+      <div class="arch-node"><svg viewBox="0 0 24 24" class="an-ico"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/><path d="M16 4.5a3.5 3.5 0 010 7M21.5 20c0-3-1.8-5.4-4.5-6.2"/></svg><b>Equipo Haften</b><span>Oficina / remoto</span></div>
       <div class="arch-link"><span>VPN + MFA</span></div>
-      <div class="arch-node"><b>Firewall</b><span>RDP 3389 cerrado a Internet</span></div>
+      <div class="arch-node"><svg viewBox="0 0 24 24" class="an-ico"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/></svg><b>Firewall</b><span>RDP 3389 cerrado</span></div>
       <div class="arch-link"><span>RDS / cliente ERP</span></div>
-      <div class="arch-node strong"><b>Servidor dedicado</b><span>Windows Server · ERP · SQL</span></div>
+      <div class="arch-node strong"><img src="assets/logos/ionos.svg" alt="IONOS" class="an-logo"><b>Servidor dedicado</b><span>Windows · ERP · SQL</span></div>
       <div class="arch-link"><span>copias diarias</span></div>
-      <div class="arch-node"><b>Respaldo externo</b><span>RAID 1 ≠ respaldo</span></div>
+      <div class="arch-node"><svg viewBox="0 0 24 24" class="an-ico"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3z"/><path d="M4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><b>Respaldo externo</b><span>RAID 1 ≠ respaldo</span></div>
     </div>
   </section>
 
-  <!-- 14 · RECOMENDACIÓN -->
+  <!-- 15 · RECOMENDACIÓN -->
   <section class="slide slide-srv-rec" data-title="Recomendación">
-    <header class="slide-head">
-      <p class="eyebrow">12 · Recomendación</p>
-      <h2>¿Qué servidor elegiríamos para Haften?</h2>
-    </header>
-    <div class="rec-grid">
-      <div class="rec-main">
-        <span class="tag tag-red">Recomendado</span>
-        <h3>IONOS AE8-64 NVMe L</h3>
-        <p class="rec-price" data-count="57308" data-prefix="$">$57,308</p>
-        <p class="rec-sub">MXN primer año estimado, con Windows Server y alta · antes de IVA y demás licencias</p>
-        <ul class="rec-why">
-          <li>EPYC 4344P + DDR5 ECC: plataforma más reciente</li>
-          <li>≈1 TB NVMe útil en RAID 1</li>
-          <li>Cancelación mensual, sin amarre anual</li>
-        </ul>
-        <div class="rec-alt"><b>Si hay que contener presupuesto:</b> AR8-64 NVMe · $38,494 año 1 con Windows y alta. No descartarlo sin medir la carga real.</div>
+    <div class="rec-wrap">
+      <div class="rec-left">
+        <div class="cover-logos">
+          <img class="cover-ionos" src="assets/logos/ionos.svg" alt="IONOS">
+          <img class="cover-amd" src="assets/logos/amd.svg" alt="AMD">
+        </div>
+        <p class="eyebrow">13 · Nuestra recomendación</p>
+        <h1 class="rec-title">AE8-64<br><span class="accent">NVMe L</span></h1>
+        <p class="rec-price"><span data-count="57308" data-prefix="$">$57,308</span><small> MXN · año 1</small></p>
+        <p class="rec-sub">Estimado con Windows Server y alta · antes de IVA y demás licencias</p>
+        <div class="chips">
+          <span class="chip">EPYC 4344P · 8 núcleos</span>
+          <span class="chip">64 GB DDR5 ECC</span>
+          <span class="chip">1 TB NVMe RAID 1</span>
+          <span class="chip">Cancelación mensual</span>
+        </div>
+        <div class="rec-alt"><b>Plan B económico:</b> AR8-64 NVMe · <b>$38,494</b> año 1 con Windows y alta. No descartarlo sin medir la carga real.</div>
       </div>
       <div class="card questions">
-        <h3>Antes de contratar, 4 preguntas</h3>
+        <h3>Antes de contratar: 4 preguntas</h3>
         <ol>
           <li><b>¿Qué ERP es?</b> SAP Business One, CONTPAQi, Aspel, Odoo u otro.</li>
-          <li><b>¿Cuántos usuarios simultáneos?</b> ¿Entran por escritorio remoto o app instalada?</li>
+          <li><b>¿Cuántos usuarios a la vez?</b> ¿Escritorio remoto o app instalada?</li>
           <li><b>¿Qué base de datos?</b> SQL Server, MySQL, PostgreSQL u otra.</li>
           <li><b>¿Cuánto ocupa hoy?</b> Base de datos, adjuntos y respaldos.</li>
         </ol>
@@ -419,7 +459,7 @@
     <div class="by"><span>Reporte elaborado por</span><img src="assets/logos/partum-design.svg" alt="Partum Design"></div>
     <nav class="dots" id="dots" aria-label="Diapositivas"></nav>
     <div class="ctrls">
-      <span class="counter" id="counter">1 / 14</span>
+      <span class="counter" id="counter">1 / 15</span>
       <button id="btnPrev" aria-label="Anterior">‹</button>
       <button id="btnNext" aria-label="Siguiente">›</button>
       <button id="btnPlay" aria-label="Reproducción automática" title="Auto (P)">▶</button>
