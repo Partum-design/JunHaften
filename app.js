@@ -187,14 +187,38 @@
     }).join("");
   }
 
+  // ---------- Server cost (year 1 incl. Windows + setup, MXN before VAT) ----------
+  const COSTS = [
+    { name: "AR8-64 NVMe", tag: "AMD", v: 38494, cls: "eco" },
+    { name: "IX8-64 HDD", tag: "Intel", v: 38494 },
+    { name: "Cloud Cube XL", tag: "Cloud", v: 40476, approx: true },
+    { name: "AE8-64 NVMe L", tag: "AMD", v: 57308, cls: "rec" },
+    { name: "AE8-64 NVMe XL", tag: "AMD", v: 65554 },
+    { name: "3XL-192 HDD", tag: "Intel", v: 69810 },
+    { name: "4XL-192 HDD", tag: "Intel", v: 85202 },
+    { name: "IX24-256 HDD", tag: "Intel", v: 115482 },
+  ];
+  function drawCost() {
+    const max = Math.max(...COSTS.map((c) => c.v));
+    $("#costBars").innerHTML = COSTS.map((c, i) => `
+      <div class="hb ${c.cls || ""}" title="${c.name}: $${fmt(c.v)} MXN año 1">
+        <span class="hb-n"><b>${c.name}</b> · ${c.tag}</span>
+        <span class="hb-track"><span class="hb-bar" style="display:block;width:${(c.v / max) * 100}%;animation-delay:${i * 0.05}s"></span></span>
+        <span class="hb-v">${c.approx ? "≈" : ""}$${fmt(c.v)}</span>
+      </div>`).join("");
+    const parts = [[27324, "--red"], [8640, "--blue"], [2530, "--amber"]];
+    const tot = parts.reduce((s, p) => s + p[0], 0);
+    $("#stackBar").innerHTML = parts.map(([v, c]) => `<i style="flex:${v / tot};background:var(${c})" title="$${fmt(v)}"></i>`).join("");
+  }
+
   // ---------- Count-up ----------
   function countUp(scope) {
     $$("[data-count]", scope).forEach((n) => {
-      const end = parseFloat(n.dataset.count), dec = +(n.dataset.decimals || 0), suf = n.dataset.suffix || "";
+      const end = parseFloat(n.dataset.count), dec = +(n.dataset.decimals || 0), suf = n.dataset.suffix || "", pre = n.dataset.prefix || "";
       const t0 = performance.now(), dur = 1400;
       const tick = (t) => {
         const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
-        n.textContent = fmt(end * e, dec) + suf;
+        n.textContent = pre + fmt(end * e, dec) + suf;
         if (p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
@@ -217,6 +241,7 @@
     countUp(s);
     if (s.classList.contains("slide-trend")) { drawTrend(); drawActivity(); }
     if (s.classList.contains("slide-audience")) { drawDonut(); drawBars(); }
+    if (s.classList.contains("slide-srv-cost")) drawCost();
     $$("video", s).forEach((v) => { v.currentTime = 0; v.play().catch(() => {}); });
   }
 
@@ -285,7 +310,7 @@
   fit();
   if (isFlow()) {
     // scroll layout: render everything once
-    drawTrend(); drawActivity(); drawDonut(); drawBars();
+    drawTrend(); drawActivity(); drawDonut(); drawBars(); drawCost();
     $$("video").forEach((v) => { v.autoplay = true; v.play().catch(() => {}); });
   }
   addEventListener("hashchange", () => {
