@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haften · AHR Expo 2026</title>
+<meta name="description" content="Resultados digitales de Haften en AHR Expo México 2026 — reporte de Partum Design.">
+<link rel="icon" href="assets/logos/haften.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="viewport" id="viewport">
+<main class="stage" id="stage">
+
+  <!-- 1 · PORTADA -->
+  <section class="slide slide-cover is-active" data-title="Portada">
+    <div class="cover-text">
+      <div class="cover-logos">
+        <div class="logo-plate"><img src="assets/logos/haften.png" alt="Haften"></div>
+        <img class="cover-ahr" src="assets/logos/ahr-expo-mexico.png" alt="AHR Expo México · Guadalajara, Jal. · Sept 29 – Oct 01 2026">
+      </div>
+      <p class="eyebrow">Reporte de resultados digitales · Facebook</p>
+      <h1>Haften en<br><span class="accent">AHR Expo</span><br>México 2026</h1>
+      <div class="cover-meta">
+        <div><span class="meta-k">Sede</span><span class="meta-v">Expo Guadalajara, Jal.</span></div>
+        <div><span class="meta-k">Expo</span><span class="meta-v">29 sep – 1 oct</span></div>
+        <div><span class="meta-k">Campaña</span><span class="meta-v">29 sep – 2 oct</span></div>
+      </div>
+    </div>
+    <div class="cover-collage">
+      <figure class="c1"><img src="assets/img/stand-feria.webp" alt="Stand Haften"></figure>
+      <figure class="c2"><img src="assets/img/ahr5.webp" alt="Equipo Haften en el stand"></figure>
+      <figure class="c3"><img src="assets/img/entrada-ahr.webp" alt="Entrada AHR Expo México 2026"></figure>
+    </div>
+  </section>
+
+  <!-- 2 · IMPACTO -->
+  <section class="slide slide-impact" data-title="Impacto">
+    <header class="slide-head">
+      <p class="eyebrow">01 · Impacto general</p>
+      <h2>La expo multiplicó el alcance de la página</h2>
+      <p class="sub">Últimos 28 días: 8 sep – 5 oct 2026 · Facebook /HaftenOficial</p>
+    </header>
+    <div class="impact-grid">
+      <div class="hero-card">
+        <span class="hero-label">Visualizaciones</span>
+        <span class="hero-num" data-count="33154">33,154</span>
+        <span class="hero-delta"><b>+769.3%</b> respecto a los 28 días anteriores</span>
+        <div class="hero-compare">
+          <div class="cmp-row"><span class="cmp-k">Periodo anterior</span><span class="cmp-bar"><i style="width:11.5%"></i></span><span class="cmp-v">≈3,814</span></div>
+          <div class="cmp-row now"><span class="cmp-k">Este periodo</span><span class="cmp-bar"><i style="width:100%"></i></span><span class="cmp-v">33,154</span></div>
+        </div>
+      </div>
+      <div class="kpi"><svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg><span class="kpi-num" data-count="18223">18,223</span><span class="kpi-label">Espectadores</span><span class="kpi-note">Personas únicas que vieron el contenido</span></div>
+      <div class="kpi"><svg viewBox="0 0 24 24" class="ico"><path d="M7 4l13 8-13 8z"/></svg><span class="kpi-num" data-count="7443">7,443</span><span class="kpi-label">Reproducciones de 3 s</span><span class="kpi-note">Video que detuvo el scroll</span></div>
+      <div class="kpi kpi-red"><svg viewBox="0 0 24 24" class="ico"><circle cx="9" cy="9" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5"/><path d="M16 12v8M12 16h8"/></svg><span class="kpi-num" data-count="84.9" data-decimals="1" data-suffix="%">84.9%</span><span class="kpi-label">Audiencia nueva</span><span class="kpi-note">Vistas de personas que aún no siguen la página</span></div>
+      <div class="kpi"><svg viewBox="0 0 24 24" class="ico"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="kpi-num" data-count="66.5" data-decimals="1" data-suffix="%">66.5%</span><span class="kpi-label">Vistas en 4 días</span><span class="kpi-note">Concentradas del 29 sep al 2 oct*</span></div>
+    </div>
+    <p class="footnote">* Estimado a partir de la gráfica diaria de Meta Business Suite. Totales del periodo: dato exacto de la plataforma.</p>
+  </section>
+
+  <!-- 3 · TENDENCIA -->
+  <section class="slide slide-trend" data-title="Tendencia diaria">
+    <header class="slide-head">
+      <p class="eyebrow">02 · Tendencia diaria</p>
+      <h2>El pico llegó justo con la expo</h2>
+      <p class="sub">Visualizaciones por día · 8 sep – 5 oct 2026</p>
+    </header>
+    <div class="chart-card">
+      <div class="chart-wrap" id="trendChart"></div>
+      <div class="chart-wrap chart-activity" id="activityChart"></div>
+      <div class="tooltip" id="tooltip" role="status"></div>
+    </div>
+    <p class="footnote">Serie diaria reconstruida de la gráfica de Meta Business Suite (valores aproximados). La franja roja marca la campaña de expo.</p>
+  </section>
+
+  <!-- 4 · AUDIENCIA -->
+  <section class="slide slide-audience" data-title="Audiencia y formatos">
+    <header class="slide-head">
+      <p class="eyebrow">03 · Audiencia y formatos</p>
+      <h2>Llegamos a gente nueva, y el Reel fue el motor</h2>
+    </header>
+    <div class="aud-grid">
+      <div class="card donut-card">
+        <h3>Seguidores vs. no seguidores</h3>
+        <div class="donut-wrap">
+          <svg viewBox="0 0 220 220" class="donut" id="donut" aria-label="84.9% no seguidores, 15.1% seguidores"></svg>
+          <div class="donut-center"><span class="dc-num">84.9%</span><span class="dc-label">no seguidores</span></div>
+        </div>
+        <div class="legend">
+          <span><i class="sw sw-red"></i>No seguidores <b>84.9%</b></span>
+          <span><i class="sw sw-blue"></i>Seguidores <b>15.1%</b></span>
+        </div>
+      </div>
+      <div class="card bars-card">
+        <h3>Visualizaciones por tipo de contenido</h3>
+        <div class="legend legend-top">
+          <span><i class="sw sw-blue"></i>Seguidores</span>
+          <span><i class="sw sw-red"></i>No seguidores</span>
+        </div>
+        <div class="bars" id="typeBars"></div>
+        <p class="card-note">El Reel concentra casi la mitad de las vistas y más del 85% de ellas vienen de personas que no seguían a Haften.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · CONTENIDO -->
+  <section class="slide slide-content" data-title="Contenido publicado">
+    <header class="slide-head">
+      <p class="eyebrow">04 · Contenido publicado</p>
+      <h2>Reels colaborativos con las marcas del stand</h2>
+      <p class="sub">Cobertura en vivo durante los 3 días de expo</p>
+    </header>
+    <div class="content-grid">
+      <div class="reels">
+        <figure class="reel"><video src="assets/reels/v2-segunda.mp4" poster="assets/reels/v2-segunda.webp" muted loop playsinline preload="metadata"></video><figcaption><b>Collab · Vaisala</b><span>Reel · 0:39</span></figcaption></figure>
+        <figure class="reel"><video src="assets/reels/v5-quinta.mp4" poster="assets/reels/v5-quinta.webp" muted loop playsinline preload="metadata"></video><figcaption><b>Collab · Greystone</b><span>Reel · 0:20</span></figcaption></figure>
+        <figure class="reel"><video src="assets/reels/v8-octava.mp4" poster="assets/reels/v8-octava.webp" muted loop playsinline preload="metadata"></video><figcaption><b>Collab · Intesis</b><span>Reel · 0:30</span></figcaption></figure>
+      </div>
+      <div class="photos">
+        <figure><img src="assets/img/ahr1.webp" alt="Visitantes en el stand Haften"></figure>
+        <figure><img src="assets/img/ahr2.webp" alt="Conferencia en AHR Expo"></figure>
+        <figure><img src="assets/img/ahr3.webp" alt="Conferencia en sala"></figure>
+        <figure><img src="assets/img/ahr4.webp" alt="Atención a cliente en el stand"></figure>
+        <figure><img src="assets/img/catalogos.webp" alt="Catálogos Haften"></figure>
+        <figure><img src="assets/img/ahr6.webp" alt="Uniforme Haften"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · CONCLUSIONES -->
+  <section class="slide slide-close" data-title="Conclusiones">
+    <header class="slide-head">
+      <p class="eyebrow">05 · Conclusiones</p>
+      <h2>Lo que nos deja AHR Expo 2026</h2>
+    </header>
+    <div class="takeaways">
+      <article><span class="tk-n">01</span><h3>Alcance ×8.7</h3><p>33,154 visualizaciones, +769% vs. el periodo anterior. La expo fue el mayor impulso de visibilidad del año para la página.</p></article>
+      <article><span class="tk-n">02</span><h3>Audiencia nueva</h3><p>84.9% de las vistas vinieron de no seguidores: el contenido salió de la base actual y llegó a nuevos prospectos del sector HVAC&amp;R.</p></article>
+      <article><span class="tk-n">03</span><h3>El video manda</h3><p>Los Reels generaron 43.9% de las vistas. Las colaboraciones con marcas (Vaisala, Greystone, Intesis) amplifican el alcance.</p></article>
+      <article><span class="tk-n">04</span><h3>Siguiente paso</h3><p>Convertir el alcance en seguidores y retención: series de video más cortas, ganchos en los primeros 3 s y contenido técnico recurrente.</p></article>
+    </div>
+    <div class="close-logos">
+      <div class="logo-plate sm"><img src="assets/logos/haften.png" alt="Haften"></div>
+      <span class="x">×</span>
+      <img src="assets/logos/ahr-expo-mexico.png" alt="AHR Expo México" class="cl-ahr">
+    </div>
+  </section>
+
+  <!-- Persistent chrome -->
+  <footer class="chrome">
+    <div class="by"><span>Reporte elaborado por</span><img src="assets/logos/partum-design.svg" alt="Partum Design"></div>
+    <nav class="dots" id="dots" aria-label="Diapositivas"></nav>
+    <div class="ctrls">
+      <span class="counter" id="counter">1 / 6</span>
+      <button id="btnPrev" aria-label="Anterior">‹</button>
+      <button id="btnNext" aria-label="Siguiente">›</button>
+      <button id="btnPlay" aria-label="Reproducción automática" title="Auto (P)">▶</button>
+      <button id="btnFs" aria-label="Pantalla completa" title="Pantalla completa (F)">⛶</button>
+    </div>
+  </footer>
+  <div class="progress"><i id="progress"></i></div>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
