@@ -2,6 +2,8 @@
 
 Presentación interactiva (16:9) con los resultados de Facebook de **Haften** durante la campaña de **AHR Expo México 2026** (Guadalajara, 29 sep – 2 oct). Elaborada por **Partum Design**.
 
+**En vivo:** https://haften-ahr-expo-2026.vercel.app
+
 Sitio estático: `index.html`, `styles.css`, `app.js` y `assets/`. Sin build.
 
 ## Uso en pantalla
