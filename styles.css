@@ -365,6 +365,7 @@ body.idle { cursor: none; }
   .rec-title { font-size: 64px; } .rec-price { font-size: 48px; } .rec-price small { font-size: 16px; }
   .rec-sub, .chip, .rec-alt { font-size: 14px; }
   .questions { padding: 22px; } .questions h3 { font-size: 20px; }
+  .iva { font-size: 10px !important; padding: 3px 5px !important; margin-left: 5px !important; }
   .questions li { font-size: 15px; padding-left: 48px; } .questions li b { font-size: 16px; } .questions li::before { font-size: 26px; }
 }
 
@@ -388,6 +389,16 @@ body.idle { cursor: none; }
 .hl-amd { height: 34px; width: auto; }
 .hl-intel { height: 50px; width: auto; }
 .head-logos img + img { padding-left: 36px; border-left: 1px solid var(--line); }
+
+.iva {
+  display: inline-block; vertical-align: middle; margin-left: 12px;
+  font: 700 18px/1 var(--font-b); font-style: normal; letter-spacing: .04em; white-space: nowrap;
+  color: #ff8a8d; background: rgba(229,72,77,.14); border: 1px solid rgba(229,72,77,.45);
+  border-radius: 8px; padding: 6px 9px; position: relative; top: -.1em;
+}
+.price .iva, .rec-price .iva, .hero-num .iva { font-size: 22px; padding: 8px 12px; top: -.15em; }
+.hb-v .iva, .ic-yr .iva, .lic-v .iva, .prov-price .iva, .vs-price .iva { font-size: 13px; padding: 4px 6px; margin-left: 8px; }
+.yr b .iva, .ic-price .iva { font-size: 15px; padding: 5px 8px; }
 
 /* 7 · cover */
 .x-sep { font-size: 40px; color: var(--ink-3); }
@@ -511,7 +522,7 @@ body.idle { cursor: none; }
 .cost-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: 28px; height: 620px; }
 .cost-grid .card { padding: 40px 44px; }
 .hbars { margin-top: 26px; display: grid; gap: 14px; }
-.hb { display: grid; grid-template-columns: 270px 1fr 130px; align-items: center; gap: 18px; font-size: 20px; }
+.hb { display: grid; grid-template-columns: 270px 1fr 196px; align-items: center; gap: 18px; font-size: 20px; }
 .hb-n { color: var(--ink-3); white-space: nowrap; }
 .hb-n b { color: var(--ink); font-weight: 600; }
 .hb-track { height: 30px; }
@@ -617,4 +628,19 @@ body.idle { cursor: none; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* "+ IVA" en la misma línea que el precio */
+.price, .hero-num, .rec-price, .yr b, .ic-price, .vs-price, .lic-v, .prov-price b, .hb-v { white-space: nowrap; }
+.srv .price { font-size: 70px; }
+.srv .price .iva { font-size: 17px; padding: 6px 9px; margin-left: 10px; }
+.breakdown-card .hero-num-md { font-size: 104px; }
+.lic-grid .hero-num-md { font-size: 100px; }
+.hero-num .iva { font-size: 20px; }
+.cube .yr { flex-wrap: wrap; gap: 6px; }
+.cube .yr b { font-size: 34px; }
+@media (max-width: 900px), (max-aspect-ratio: 1/1) {
+  .srv .price { font-size: 40px; }
+  .breakdown-card .hero-num-md, .lic-grid .hero-num-md { font-size: 44px; }
+  .price, .hero-num { white-space: normal; }
 }

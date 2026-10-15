@@ -204,7 +204,7 @@
       <div class="hb ${c.cls || ""}" title="${c.name}: $${fmt(c.v)} MXN año 1">
         <span class="hb-n"><b>${c.name}</b> · ${c.tag}</span>
         <span class="hb-track"><span class="hb-bar" style="display:block;width:${(c.v / max) * 100}%;animation-delay:${i * 0.05}s"></span></span>
-        <span class="hb-v">${c.approx ? "≈" : ""}$${fmt(c.v)}</span>
+        <span class="hb-v">${c.approx ? "≈" : ""}$${fmt(c.v)}<em class="iva">+ IVA</em></span>
       </div>`).join("");
     const parts = [[27324, "--red"], [8640, "--blue"], [2530, "--amber"]];
     const tot = parts.reduce((s, p) => s + p[0], 0);
